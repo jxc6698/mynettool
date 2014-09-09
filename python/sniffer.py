@@ -43,7 +43,8 @@ while True:
 	
 #	print 'Version : ' + str(version) + ' IP Header Length : ' + str(ihl) + ' TTL : ' + str(ttl) + ' Protocol : ' + str(protocol) + ' Source Address : ' + str(s_addr) + ' Destination Address : ' + str(d_addr)
 	
-	if( s_addr == BRAS_IP  ) :
+	print d_addr
+	if( d_addr == BRAS_IP  ) :
 
 		tcp_header = packet[iph_length:iph_length+20] #now unpack them :)
 		tcph = unpack('!HHLLBBHHH' , tcp_header)
@@ -66,4 +67,6 @@ while True:
 #  not print data
 #	print 'Data : ' + data
 		print
+		if( str(dest_port) == '80' ):
+			print len(packet) ;
 
