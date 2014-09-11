@@ -1,0 +1,8 @@
+在进行 arp欺骗攻击以后 需要进行转发被攻击机器的数据包，这样才可以让原来机器保持原来的连接
+打开linux 转发设置
+echo "1" /proc/sys/net/ipv4/ip_forword
+
+
+
+
+
