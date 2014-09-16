@@ -20,11 +20,16 @@ import string
 #ETH_TARGET = '\x90\x2b\x34\x5d\xa7\xe3'
 #another_IP = "114.212.83.200"
 
-ETH_TARGET = '\x50\xe5\x49\x47\x1a\x8c'
-another_IP = "114.212.87.146"
+#ETH_TARGET = '\x50\xe5\x49\x47\x1a\x8c'
+#another_IP = "114.212.87.146"
+
+
+false_IP = '114.212.80.1'
 
 ETH_TYPE_ARP= 0x0806
 
+
+net_CARD = 'eth0'
 
 def send_arp( ifname , address ):
 	""" send out a arp """
@@ -73,9 +78,8 @@ def send_arp( ifname , address ):
 	eth_socket.close();
 
 
-false_IP = '114.212.80.1'
 
 if __name__ == '__main__':
-	send_arp( 'eth0' , false_IP );
+	send_arp( net_CARD , false_IP );
 	print "lllll"
 

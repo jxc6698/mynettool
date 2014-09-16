@@ -15,6 +15,8 @@ ETH_BROADCAST = '\xff\xff\xff\xff\xff\xff'
 another_IP = "114.212.86.120"
 
 
+net_CARD = 'eth0'
+
 ETH_ZERO = '\x00\x00\x00\x00\x00\x00'
 ETH_TYPE_ARP= 0x0806
 ARP_REQUEST = 1
@@ -76,6 +78,6 @@ def send_arp( ifname , address ):
 
 
 if __name__ == '__main__':
-	send_arp( 'eth0' , false_IP );
+	send_arp( net_CARD , false_IP );
 	print "lllll"
 
